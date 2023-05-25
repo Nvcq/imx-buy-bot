@@ -3,7 +3,7 @@ name: CD
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/imx-buy-bot
-            git pull origin master
+            git pull origin main
             rm -rf nodes_modules
             yarn
             pm2 restart buy-eth
