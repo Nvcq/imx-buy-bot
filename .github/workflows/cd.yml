@@ -24,3 +24,6 @@ jobs:
             pm2 start "yarn buy-usdc >> /home/nvcq/logs/buy-usdc.log"
             pm2 start "yarn buy-eth >> /home/nvcq/logs/buy-eth.log"
             pm2 start "yarn buy-imx >> /home/nvcq/logs/buy-imx.log"
+            pm2 stop "buy-eth"
+            pm2 stop "buy-usdc"
+            pm2 stop "buy-imx"
