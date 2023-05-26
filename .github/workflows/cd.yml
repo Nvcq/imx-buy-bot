@@ -21,9 +21,6 @@ jobs:
             git pull origin main
             rm -rf nodes_modules
             yarn
-            pm2 restart "yarn buy-usdc >> /home/nvcq/logs/buy-usdc.log"
-            pm2 restart "yarn buy-eth >> /home/nvcq/logs/buy-eth.log"
-            pm2 restart "yarn buy-imx >> /home/nvcq/logs/buy-imx.log"
-            pm2 stop "buy-eth"
-            pm2 stop "buy-usdc"
-            pm2 stop "buy-imx"
+            pm2 restart "buy-eth"
+            pm2 restart "buy-usdc"
+            pm2 restart "buy-imx"
